@@ -1,23 +1,18 @@
-FROM node:20
+# Gunakan Node.js image berbasis Debian Bullseye yang masih aktif
+FROM node:18-bullseye
 
-# Set timezone (opsional)
-ENV TZ=Asia/Jakarta
-
-# Direktori kerja
+# Set working directory
 WORKDIR /app
 
-# Install dependensi sistem
-RUN apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y \
-    ffmpeg \
-    imagemagick \
-    libwebp-dev \
-    && rm -rf /var/lib/apt/lists/*
-
-# Salin semua file ke dalam container
+# Copy semua file ke dalam container
 COPY . .
 
-# Install dependensi Node.js
+# Install dependensi
+RUN apt-get update && \
+    apt-get install -y ffmpeg imagemagick webp && \
+    rm -rf /var/lib/apt/lists/*
+
+# Install npm dependencies
 RUN npm install
 
 # Jalankan bot
