@@ -1,20 +1,24 @@
-# Gunakan Node.js LTS
 FROM node:20
 
-# Buat folder kerja dalam container
+# Set timezone (opsional)
+ENV TZ=Asia/Jakarta
+
+# Direktori kerja
 WORKDIR /app
 
-# Install dependensi sistem seperti ffmpeg, webp, dan imagemagick
+# Install dependensi sistem
 RUN apt-get update && \
-    apt-get install -y ffmpeg webp imagemagick && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+    DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    ffmpeg \
+    imagemagick \
+    libwebp-dev \
+    && rm -rf /var/lib/apt/lists/*
 
-# Salin semua file proyek ke dalam container
+# Salin semua file ke dalam container
 COPY . .
 
-# Install semua dependensi dari package.json
+# Install dependensi Node.js
 RUN npm install
 
-# Jalankan bot via npm start
+# Jalankan bot
 CMD ["npm", "start"]
