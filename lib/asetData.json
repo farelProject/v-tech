@@ -1,0 +1,63 @@
+{
+  "kendaraan": [
+    { "name": "Honda Beat", "price": 17000000 },
+    { "name": "Yamaha Mio", "price": 19000000 },
+    { "name": "Suzuki Nex II", "price": 21000000 },
+    { "name": "Honda Vario 160", "price": 28000000 },
+    { "name": "Yamaha Aerox", "price": 30000000 },
+    { "name": "Yamaha NMAX", "price": 34000000 },
+    { "name": "Kawasaki Ninja 250", "price": 66000000 },
+    { "name": "KTM RC 390", "price": 100000000 },
+    { "name": "Yamaha R1", "price": 500000000 },
+    { "name": "Ducati Panigale V4", "price": 800000000 },
+
+    { "name": "Daihatsu Ayla", "price": 120000000 },
+    { "name": "Toyota Agya", "price": 130000000 },
+    { "name": "Honda Brio", "price": 180000000 },
+    { "name": "Toyota Avanza", "price": 250000000 },
+    { "name": "Mitsubishi Xpander", "price": 280000000 },
+    { "name": "Honda CR-V", "price": 500000000 },
+    { "name": "Mazda CX-5", "price": 600000000 },
+    { "name": "BMW X5", "price": 1500000000 },
+    { "name": "Tesla Model S", "price": 2200000000 },
+    { "name": "Lamborghini Aventador", "price": 8000000000 },
+
+    { "name": "Ultralight Aircraft", "price": 1500000000 },
+    { "name": "Cessna 172", "price": 4500000000 },
+    { "name": "Gulfstream G700", "price": 105000000000 },
+
+    { "name": "Robinson R44", "price": 8200000000 },
+    { "name": "Bell 505 Jet Ranger X", "price": 21000000000 },
+    { "name": "Airbus H160", "price": 45000000000 }
+  ],
+
+  "rumah": [
+    { "name": "Rumah Tipe 21", "price": 250000000 },
+    { "name": "Rumah Tipe 36", "price": 350000000 },
+    { "name": "Rumah Tipe 45", "price": 500000000 },
+    { "name": "Rumah Tipe 54", "price": 650000000 },
+    { "name": "Rumah Tipe 70", "price": 800000000 },
+    { "name": "Rumah Cluster Minimalis", "price": 1000000000 },
+    { "name": "Rumah Dua Lantai", "price": 1500000000 },
+    { "name": "Rumah Smart Home", "price": 2500000000 },
+    { "name": "Villa Puncak", "price": 4000000000 },
+    { "name": "Rumah Mewah Elite", "price": 9000000000 }
+  ],
+
+  "lahan": [
+    { "name": "Tanah 1 Meter Persegi", "price": 1200000 },
+    { "name": "Tanah 10 Meter Persegi", "price": 10000000 },
+    { "name": "Tanah Kavling 100m", "price": 200000000 },
+    { "name": "Tanah Sawah Subur", "price": 350000000 },
+    { "name": "Tanah Strategis Kota", "price": 1200000000 }
+  ],
+
+  "toko": [
+    { "name": "Toko Kelontong Sederhana", "price": 15000000 },
+    { "name": "Toko Baju Kecil", "price": 40000000 },
+    { "name": "Mini Market", "price": 150000000 },
+    { "name": "Ruko 2 Lantai", "price": 800000000 },
+    { "name": "Supermarket Modern", "price": 2500000000 },
+    { "name": "Pusat Grosir", "price": 8000000000 }
+  ]
+}
