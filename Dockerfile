@@ -1,19 +1,19 @@
-# Gunakan Node.js image berbasis Debian Bullseye yang masih aktif
-FROM node:18-bullseye
+FROM node:lts-buster
 
-# Set working directory
-WORKDIR /app
-
-# Copy semua file ke dalam container
-COPY . .
-
-# Install dependensi
 RUN apt-get update && \
-    apt-get install -y ffmpeg imagemagick webp && \
-    rm -rf /var/lib/apt/lists/*
+  apt-get install -y \
+  ffmpeg \
+  imagemagick \
+  webp && \
+  apt-get upgrade -y && \
+  rm -rf /var/lib/apt/lists/*
 
-# Install npm dependencies
+COPY package.json .
+
 RUN npm install
 
-# Jalankan bot
-CMD ["npm", "start"]
+COPY . .
+
+EXPOSE 5000
+
+RUN npm start
